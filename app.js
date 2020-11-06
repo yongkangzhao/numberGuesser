@@ -22,6 +22,7 @@ function initialize(e){
     guess.value = '';
     msg.className = '';
     guess.style.borderColor = 'gray';
+    guess.disabled = false;
     console.log(answer);
 }
 
@@ -67,6 +68,7 @@ function wrong(){
 
 function gameOver(){
     submit.value = 'Play Again!';
+    guess.disabled = true;
 }
 
 
