@@ -21,6 +21,7 @@ function initialize(e){
     msg.innerHTML = '';
     guess.value = '';
     msg.className = '';
+    guess.style.borderColor = 'gray';
     console.log(answer);
 }
 
@@ -48,11 +49,13 @@ function evaluate(e){
 function correct(){
     msg.innerHTML = 'correct';
     msg.className = 'correct';
+    guess.style.borderColor = 'green';
     gameOver();
 }
 
 function wrong(){
     msg.className = 'wrong';
+    guess.style.borderColor = 'red';
     currentLives -= 1;
     if (currentLives == 0){
         msg.innerHTML = 'wrong and the answer is: '+answer;
